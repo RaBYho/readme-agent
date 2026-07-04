@@ -31,18 +31,21 @@ A CLI tool that automatically generates high-quality README.md files for local p
 ## Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/your-username/readme-agent.git
+git clone https://github.com/RaBYho/readme-agent.git
 cd readme-agent
 ```
 
 2. Create and activate a virtual environment (recommended):
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -50,16 +53,19 @@ pip install -r requirements.txt
 ## Configuration
 
 1. Copy the example environment file:
+
 ```bash
 cp .env.example .env
 ```
 
 2. Edit `.env` and add your OpenRouter API key:
+
 ```
 OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 Alternatively, you can set the environment variable directly in your shell:
+
 ```bash
 export OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
@@ -67,16 +73,19 @@ export OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ## Usage
 
 Basic usage:
+
 ```bash
 python main.py /path/to/your/project
 ```
 
 Advanced options:
+
 ```bash
 python main.py . --model "meta-llama/llama-3.1-70b-instruct" --lang "English" --output docs/README.md
 ```
 
 Dry-run mode (shows extracted context without calling the LLM):
+
 ```bash
 python main.py . --dry-run
 ```
